@@ -21,7 +21,7 @@ describe('qs.stringify', function(){
 	  });
 	  
 	  it('should stringify to empty string if a value is missing', function() {
-	    expect(qs.stringify({foo:''})).to.eql('foo=');
+	    expect(qs.stringify({foo:''})).to.eql('foo');
 	  });
 	  
 	  it('should stringify numeric values to strings', function() {
@@ -41,7 +41,7 @@ describe('qs.stringify', function(){
 	  });
 
 		it('should strigify two empty values to not undefined', function() {
-		  expect(qs.stringify({ foo: 'bar', baz: '', raz: '' })).to.eql('foo=bar&baz=&raz='); 
+		  expect(qs.stringify({ foo: 'bar', baz: '', raz: '' })).to.eql('foo=bar&baz&raz');
 		});
   });
   

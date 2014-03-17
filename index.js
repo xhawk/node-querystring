@@ -256,6 +256,9 @@ var stringify = exports.stringify = function(obj, prefix) {
 
 function stringifyString(str, prefix) {
   if (!prefix) throw new TypeError('stringify expects an object');
+  if (str === "") {
+      return prefix;
+  }
   return prefix + '=' + encodeURIComponent(str);
 }
 
